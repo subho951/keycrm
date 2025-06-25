@@ -24,6 +24,7 @@ return new class extends Migration
             $table->longText('description');
             $table->string('industry_id', 100);
             $table->string('no_of_employee', 100);
+            $table->string('base_url', 100);
             $table->tinyInteger('status')->default(1);
             $table->softDeletes();
             $table->timestamp('created_at')->useCurrent();

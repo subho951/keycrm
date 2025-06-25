@@ -56,6 +56,7 @@ class CompanyController extends Controller
                     'description'       => 'required',
                     'industry_id'       => 'required',
                     'no_of_employee'    => 'required',
+                    'base_url'          => 'required',
                     'logo'              => 'required',
                 ];
                 if($this->validate($request, $rules)){
@@ -97,6 +98,7 @@ class CompanyController extends Controller
                         'description'           => strip_tags($postData['description']),
                         'industry_id'           => strip_tags($postData['industry_id']),
                         'no_of_employee'        => strip_tags($postData['no_of_employee']),
+                        'base_url'              => strip_tags($postData['base_url']),
                         'logo'                  => 'uploads/' . $upload_folder . '/' . $logo,
                         'status'                => ((array_key_exists("status",$postData))?1:0),
                     ];
@@ -134,6 +136,7 @@ class CompanyController extends Controller
                     'description'       => 'required',
                     'industry_id'       => 'required',
                     'no_of_employee'    => 'required',
+                    'base_url'          => 'required',
                 ];
                 if($this->validate($request, $rules)){
                     /* logo */
@@ -164,6 +167,7 @@ class CompanyController extends Controller
                         'description'           => strip_tags($postData['description']),
                         'industry_id'           => strip_tags($postData['industry_id']),
                         'no_of_employee'        => strip_tags($postData['no_of_employee']),
+                        'base_url'              => strip_tags($postData['base_url']),
                         'logo'                  => $logoLink,
                         'status'                => ((array_key_exists("status",$postData))?1:0),
                     ];

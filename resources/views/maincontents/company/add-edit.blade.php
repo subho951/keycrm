@@ -43,6 +43,7 @@ $controllerRoute = $module['controller_route'];
                 $description        = $row->description;
                 $industry_id        = $row->industry_id;
                 $no_of_employee     = $row->no_of_employee;
+                $base_url           = $row->base_url;
                 $logo               = $row->logo;
                 $status             = $row->status;
             } else {
@@ -57,6 +58,7 @@ $controllerRoute = $module['controller_route'];
                 $description        = '';
                 $industry_id        = '';
                 $no_of_employee     = '';
+                $base_url           = '';
                 $logo               = '';
                 $status             = '';
             }
@@ -106,13 +108,17 @@ $controllerRoute = $module['controller_route'];
                             <textarea class="form-control" id="description" name="description" required placeholder="Description"><?=$description?></textarea>
                         </div>
 
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <label for="contact_person" class="form-label">Contact Person Name <small class="text-danger">*</small></label>
                             <input class="form-control" type="text" id="contact_person" name="contact_person" value="<?=$contact_person?>" required placeholder="Contact Person Name" />
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-4 mb-3">
                             <label for="no_of_employee" class="form-label">No. Of Employee <small class="text-danger">*</small></label>
                             <input class="form-control" type="text" id="no_of_employee" name="no_of_employee" value="<?=$no_of_employee?>" required placeholder="No. Of Employee" />
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="base_url" class="form-label">Base URL <small class="text-danger">*</small></label>
+                            <input class="form-control" type="text" id="base_url" name="base_url" value="<?=$base_url?>" required placeholder="Base URL" />
                         </div>
                         
                         <div class="col-md-3 mb-3">
